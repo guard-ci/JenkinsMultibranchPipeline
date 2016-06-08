@@ -1,5 +1,6 @@
 node {
     stage 'Checkout'
+    checkout scm
     echo 'Hello from Pipeline'
 
     stage 'Swift'
