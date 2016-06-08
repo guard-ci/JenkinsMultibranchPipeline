@@ -5,17 +5,15 @@ node {
     stage 'Setup'
     echo "setup"
 
-    stage 'Swift'
-    sh 'swift build'
-    sh 'swift test'
-
-    stage 'Haskell'
+    stage 'Build'
+    sh 'make build_swift'
     dir('haskelldemo') {
-        sh 'stack setup'
-        sh 'stack build'
-        sh 'stack test'
+        sh 'make build_haskell'
     }
 
-    stage 'Go'
-    sh 'make test'
+    stage 'Test'
+    sh 'make test_swift'
+    dir('haskelldemo') {
+        sh 'make test_haskell'
+    }
 }
