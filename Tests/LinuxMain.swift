@@ -1,4 +1,5 @@
 import XCTest
+import BasicTestSuite
 
 var tests = [XCTestCaseEntry]()
 
