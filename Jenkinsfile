@@ -17,6 +17,5 @@ node {
     }
 
     stage 'Go'
-    sh 'go build'
-    sh 'go test'
+    sh 'make test'
 }
