@@ -3,7 +3,8 @@ node {
     checkout scm
 
     stage 'Setup'
-    sh 'go get github.com/stretchr/testify/assert'
+    echo "setup"
+    #sh 'go get github.com/stretchr/testify/assert'
 
     stage 'Swift'
     sh 'swift build'
