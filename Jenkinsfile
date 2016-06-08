@@ -10,6 +10,6 @@ node {
 
     stage 'Test'
     sh 'make test_swift'
-    pwd()
+    sh 'pwd'
     sh 'make test_go'
 }
