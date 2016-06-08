@@ -4,7 +4,6 @@ node {
 
     stage 'Setup'
     echo "setup"
-    #sh 'go get github.com/stretchr/testify/assert'
 
     stage 'Swift'
     sh 'swift build'
