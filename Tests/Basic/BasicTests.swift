@@ -9,7 +9,7 @@ class BasicTests: XCTestCase {
     func testBasic() {
         let basic = Basic(x: 1, y: 2)
         XCTAssertEqual(basic.x, 1)
-        XCTAssertEqual(basic.y, 1)
+        XCTAssertEqual(basic.y, 2)
     }
 }
 
