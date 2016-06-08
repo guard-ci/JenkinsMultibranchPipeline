@@ -1,7 +1,9 @@
 node {
     stage 'Checkout'
     checkout scm
-    echo 'Hello from Pipeline'
+
+    stage 'Setup'
+    go get github.com/stretchr/testify/assert
 
     stage 'Swift'
     sh 'swift build'
@@ -13,4 +15,8 @@ node {
         sh 'stack build'
         sh 'stack test'
     }
+
+    stage 'Go'
+    sh 'go build'
+    sh 'go test'
 }
