@@ -1,17 +1,13 @@
 node {
     stage 'Checkout'
     checkout scm
-    sh 'echo $PATH'
-    sh 'go version'
 
     stage 'Setup'
-    echo "setup"
+    sh 'make setup'
 
     stage 'Build'
-    sh 'make build_swift'
+    sh 'make build'
 
     stage 'Test'
-    sh 'make test_swift'
-    sh 'pwd'
-    sh 'make test_go'
+    sh 'make test'
 }
