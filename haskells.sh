@@ -1,8 +1,8 @@
 #!/bin/sh
 
 function runtask {
-    local PROJS=$(find . -type f -name "stack.yaml" | sed "s/\.\/\(.*\)\/stack.yaml/\1/g")
-    local DIR=$(pwd)
+    PROJS=$(find . -type f -name "stack.yaml" | sed "s/\.\/\(.*\)\/stack.yaml/\1/g")
+    DIR=$(pwd)
 
     for pro in ${PROJS}; do
         proDir=$DIR/$pro
