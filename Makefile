@@ -1,20 +1,18 @@
-.PHONY : default setup build test
-
 default: test
 
 setup: 
-	make setup-swift
 	make setup-go
+	make setup-swift
 	make setup-haskell
 
 build:
-	make build-swift
 	make build-go
+	make build-swift
 	make build-haskell
 
 test:
-	make test-swift
 	make test-go
+	make test-swift
 	make test-haskell
 
 # swift
@@ -29,6 +27,7 @@ test-swift:
 	swift test
 
 # go
+
 setup-go:
 	go get github.com/stretchr/testify/assert
 
@@ -45,6 +44,7 @@ lint-go:
 	golint ./...
 
 # haskell
+
 setup-haskell:
 	./haskells.sh setup
 
@@ -53,3 +53,5 @@ build-haskell:
 
 test-haskell:
 	./haskells.sh test
+
+.PHONY : default setup build test
