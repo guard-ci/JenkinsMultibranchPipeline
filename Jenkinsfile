@@ -1,6 +1,8 @@
 node {
     stage 'Checkout'
     checkout scm
+    sh 'echo $PATH'
+    sh 'go version'
 
     stage 'Setup'
     echo "setup"
