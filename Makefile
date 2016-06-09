@@ -50,8 +50,7 @@ setup-haskell:
 	#stack setup
 
 build-haskell:
-	echo "build haskell"
-	#stack build
+	./build-haskells.sh
 
 test-haskell:
 	echo "test haskell"
