@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 function runtask {
     local PROJS=$(find . -type f -name "stack.yaml" | sed "s/\.\/\(.*\)\/stack.yaml/\1/g")
