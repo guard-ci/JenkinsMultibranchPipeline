@@ -1,0 +1,7 @@
+fail_on_violations: false
+
+go:
+  enabled: true
+
+swift:
+  config_file: .swiftlint.yml
