@@ -7,3 +7,10 @@ public struct Basic {
         self.y = y
     }
 }
+
+func testHound() -> Int {
+    var x: Int?
+    x = 0
+    return x!
+}
+
