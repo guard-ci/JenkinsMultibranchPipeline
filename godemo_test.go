@@ -6,5 +6,6 @@ import (
 )
 
 func TestPlus(t *testing.T) {
+
 	assert.Equal(t, 2, Plus(1, 1))
 }
