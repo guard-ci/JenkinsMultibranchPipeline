@@ -46,13 +46,10 @@ lint-go:
 
 # haskell
 setup-haskell:
-	echo "setup haskell"
-	#stack setup
+	./haskells.sh setup
 
 build-haskell:
-	echo "build haskell"
-	#stack build
+	./haskells.sh build
 
 test-haskell:
-	echo "test haskell"
-	#stack test
+	./haskells.sh test
