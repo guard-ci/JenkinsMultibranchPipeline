@@ -15,16 +15,24 @@ test:
 	make test-swift
 	make test-haskell
 
+clean:
+	make clean-go
+	make clean-swift
+	make clean-haskell
+
 # swift
 
 setup-swift:
-	echo "setup swift"
+	swiftenv init -
 
 build-swift:
 	swift build
 
 test-swift:
 	swift test
+
+clean-swift:
+	rm -rf .build
 
 # go
 
@@ -43,15 +51,21 @@ fmt-go:
 lint-go:
 	golint ./...
 
+clean-go:
+	echo "clean go"
+
 # haskell
 
 setup-haskell:
-	./haskells.sh setup
+	./stack.sh setup
 
 build-haskell:
-	./haskells.sh build
+	./stack.sh build
 
 test-haskell:
-	./haskells.sh test
+	./stack.sh test
+
+clean-haskell:
+	echo "clean haskell"
 
 .PHONY : default setup build test
